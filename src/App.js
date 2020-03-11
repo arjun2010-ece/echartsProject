@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TopBar from "./components/top-bar";
+import { Pie } from "./components/charts/Pie";
+import { Line } from "./components/charts/Line";
+import { Funnel } from "./components/charts/Funnel";
+import { WorldMap } from "./components/charts/Map";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TopBar />
+      <h3>Pie chart:</h3>
+      <Pie />
+      <br />
+      <br />
+      <h3>Line chart:</h3>
+      <Line />
+      <br />
+      <br />
+      <h3>Funnel chart:</h3>
+      <Funnel />
+      <br />
+      <br />
+      <h3>World Map chart:</h3>
+      <WorldMap />
     </div>
-  );
+  )
 }
-
 export default App;
